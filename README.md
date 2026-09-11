@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ScamRakshak
 
-## Getting Started
+ScamRakshak is a front-end concept for a security product, presenting biometric access, monitoring, integrations, pricing, and contact experiences.
 
-First, run the development server:
+## Core features
+
+- Responsive product landing page with animated security-themed sections.
+- Interactive demonstration dashboards for integrations, user groups, monitoring, and biometric access.
+- Separate pricing, contact, and advanced product pages through the Next.js App Router.
+- Reusable Radix UI-based controls styled with Tailwind CSS.
+
+## Technology stack
+
+- Next.js 14 and React 18
+- JavaScript and JSX
+- Tailwind CSS, Radix UI, and Lucide icons
+- Framer Motion
+
+## Prerequisites
+
+- Node.js 20 or newer
+- npm (a `package-lock.json` is included)
+
+## Local setup
 
 ```bash
+git clone https://github.com/varunisrani/scamrakshak.git
+cd scamrakshak
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server is available at `http://localhost:3000` by default.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To create and serve a production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+The manifest also defines `npm run lint`.
 
-To learn more about Next.js, take a look at the following resources:
+## Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The current source does not read any environment variables. All displayed data and interactions are implemented in the client-side components.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Project structure
 
-## Deploy on Vercel
+```text
+src/app/          App Router pages, layout, fonts, and global styles
+src/components/   Product sections, dashboards, header/footer, and UI primitives
+src/hooks/        Shared toast hook
+src/lib/          Styling utilities
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Status and limitations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This repository is a UI prototype rather than a deployed security service. The named integrations, monitoring events, biometric controls, and user groups are demonstrations backed by component state; there is no authentication, persistence, external integration, or security-scanning backend in this codebase.
